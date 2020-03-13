@@ -52,4 +52,4 @@ Azure Bastion を展開したいときは、以下の "Deploy to Azure" ボタ�
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmcs-apps%2FARMTemplates%2Fmaster%2FJumpVM%2Fbastion-template.json)
 
-** Note: 事前にJump VM の展開が完了していることを確認した上で実行してください。**
+**Note: 事前にJump VM の展開が完了していることを確認した上で実行してください。**
