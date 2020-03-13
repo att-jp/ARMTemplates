@@ -23,7 +23,7 @@
   "variables": {
     "imagePublisher": "MicrosoftVisualStudio",
     "imageOffer": "VisualStudio2019latest",
-    "imageSku": "vs-2019-comm-latest-win10-n",
+    "imageSku": "vs-2019-comm-latest-ws2019",
     "OSDiskName": "jumpvmosdisk",
     "nicName": "jumpvmnic",
     "addressPrefix": "10.1.0.0/16",

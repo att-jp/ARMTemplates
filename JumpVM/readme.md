@@ -1,6 +1,6 @@
 # JumpVM - Windows 10 with Visual Studio 2019 
 
-このテンプレートはAzure VM (Visual Studio 2019 Comminity on Windows 10)をデプロイし、AZ-203, AZ-204の研修に必要なソフトウェアを自動セットアップするためのテンプレートです。
+このテンプレートはAzure VM (Visual Studio 2019 Comminity on Windows Server 2019 をデプロイし、AZ-203, AZ-204の研修に必要なソフトウェアを自動セットアップするためのテンプレートです。
 
 # 構成情報
 - local admin: labadmin
@@ -10,12 +10,14 @@
 - Public IP: jumpvmip (basic / static)
 
 # ソフトウェア一覧
-- OS：Windows 10 Enterprise N
+- OS：Windows Server 2019 Enterprise
 - Visual Studio 2019 Community Edition - latest version
 - 7zip 
-- putty.install 
+- putty 
+- Windows Admin Center
 - foxitreader 
-- googlechrome 
+- Microsoft Edge
+- Google Chrome 
 
 # Azure tools
 - azure-cli 
