@@ -6,11 +6,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 # system tools 
 choco install 7zip -confirm:$false
 choco install putty.install -confirm:$false
-choco install microsoft-edge -confirm:$false
 choco install marktext -confirm:$false
-choco install windows-admin-center -confirm:$false
 choco install foxitreader -confirm:$false
-choco install microsoft-edge -confirm:$false
 choco install googlechrome -confirm:$false
 
 # Azure tools
