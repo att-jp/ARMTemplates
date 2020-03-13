@@ -23,7 +23,7 @@
   "variables": {
     "imagePublisher": "MicrosoftVisualStudio",
     "imageOffer": "VisualStudio2019latest",
-    "imageSku": "vs-2019-comm-latest-ws2019",
+    "imageSku": "vs-2019-comm-latest-win10-n",
     "OSDiskName": "jumpvmosdisk",
     "nicName": "jumpvmnic",
     "addressPrefix": "10.1.0.0/16",
@@ -190,7 +190,7 @@
               "autoUpgradeMinorVersion":true,
               "settings": {
                   "fileUris": [
-                     "https://raw.githubusercontent.com/pdtit/ARMtemplates/master/JumpVM/configurevm.ps1"
+                     "https://raw.githubusercontent.com/mcs-apps/ARMTemplates/master/JumpVM/configurevm.ps1"
                   ],
                   "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File configurevm.ps1"
               }
