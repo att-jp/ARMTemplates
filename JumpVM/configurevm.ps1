@@ -19,7 +19,7 @@ choco install azurepowershell -confirm:$false
 choco install azcopy -confirm:$false
 choco install azure-data-studio -confirm:$false
 
-# AZ-203-204 handy tools
+# AZ-203, AZ-204 handy tools
 choco install sql-server-management-studio -confirm:$false
 choco install nodejs-lts -confirm:$false
 choco install cosmosdbexplorer -confirm:$false

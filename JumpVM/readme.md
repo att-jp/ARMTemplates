@@ -1,4 +1,4 @@
-# JumpVM - Windows 10 with Visual Studio 2019 
+# JumpVM - Windows Server 2019 with Visual Studio 2019 
 
 このテンプレートはAzure VM (Visual Studio 2019 Comminity on Windows Server 2019 をデプロイし、AZ-203, AZ-204の研修に必要なソフトウェアを自動セットアップするためのテンプレートです。
 

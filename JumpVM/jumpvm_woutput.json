@@ -19,7 +19,6 @@
     }
     
   },
-
   "variables": {
     "imagePublisher": "MicrosoftVisualStudio",
     "imageOffer": "VisualStudio2019latest",
