@@ -23,7 +23,6 @@
     "imagePublisher": "MicrosoftVisualStudio",
     "imageOffer": "VisualStudio2019latest",
     "imageSku": "vs-2019-comm-latest-ws2019",
-    "OSDiskName": "jumpvmosdisk",
     "nicName": "jumpvmnic",
     "addressPrefix": "10.1.0.0/16",
     "subnetName": "Subnet",
@@ -31,13 +30,11 @@
     "vhdStorageType": "Premium_LRS",
     "publicIPAddressName": "jumpvmip",
     "publicIPAddressType": "static",
-    "vhdStorageContainerName": "vhds",
     "vmName": "jumpvm",
-    "vmSize": "Standard_F4s_V2",
+    "vmSize": "Standard_F2s_V2",
     "virtualNetworkName": "jumpvmVNet",
     "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
-    "vhdStorageAccountName": "[concat('vhdstorage', uniqueString(resourceGroup().id))]",
     "scriptFolder": ".",
     "scriptFileName": "config-winvm.ps1",
     "fileToBeCopied": "ExtensionLog.txt"
@@ -45,19 +42,6 @@
   },
 
   "resources": [
-    {
-      "type": "Microsoft.Storage/storageAccounts",
-      "name": "[variables('vhdStorageAccountName')]",
-      "apiVersion": "2016-01-01",
-      "location": "[resourceGroup().location]",
-      "tags": {
-        "displayName": "StorageAccount"
-      },
-      "sku": {
-        "name": "[variables('vhdStorageType')]"
-      },
-      "kind": "Storage"
-    },
     {
       "apiVersion": "2016-03-30",
       "type": "Microsoft.Network/publicIPAddresses",
@@ -132,7 +116,6 @@
         "displayName": "JumpVM"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/', variables('vhdStorageAccountName'))]",
         "[resourceId('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
       ],
       "properties": {
@@ -152,11 +135,6 @@
             "version": "latest"
           },
           "osDisk": {
-            "name": "osdisk",
-            "vhd": {
-              "uri": "[concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('vhdStorageAccountName')), '2016-01-01').primaryEndpoints.blob, variables('vhdStorageContainerName'), '/', variables('OSDiskName'), '.vhd')]"
-            },
-            "caching": "ReadWrite",
             "createOption": "FromImage"
           }
         },
@@ -189,7 +167,7 @@
               "autoUpgradeMinorVersion":true,
               "settings": {
                   "fileUris": [
-                     "https://raw.githubusercontent.com/mcs-apps/ARMTemplates/master/JumpVM/configurevm.ps1"
+                     "https://raw.githubusercontent.com/att-jp/ARMTemplates/master/JumpVM/configurevm.ps1"
                   ],
                   "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File configurevm.ps1"
               }
@@ -197,10 +175,6 @@
       }
       ]
     }
-
-
-
-
 
   ],
   "outputs": {
