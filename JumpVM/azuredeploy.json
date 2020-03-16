@@ -160,9 +160,9 @@
         },
         "diagnosticsProfile": {
           "bootDiagnostics": {
-            "enabled": false
+            "enabled": true,
+            "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))).primaryEndpoints.blob]"
           }
-        }
       },
       "resources": [
         {
