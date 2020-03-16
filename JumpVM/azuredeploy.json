@@ -48,6 +48,9 @@
       "apiVersion": "2018-11-01",
       "name": "[variables('storageAccountName')]",
       "location": "[resourceGroup().location]",
+      "tags": {
+        "displayName": "StorageAccount"
+      },
       "sku": {
         "name": "Standard_LRS"
       },
