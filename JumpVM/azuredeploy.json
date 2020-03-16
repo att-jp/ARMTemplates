@@ -23,6 +23,7 @@
     "imagePublisher": "MicrosoftVisualStudio",
     "imageOffer": "VisualStudio2019latest",
     "imageSku": "vs-2019-comm-latest-ws2019",
+    "StorageType": "Premium_LRS",
     "nicName": "jumpvmnic",
     "addressPrefix": "10.1.0.0/16",
     "subnetName": "Subnet",
@@ -42,6 +43,17 @@
   },
 
   "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2018-11-01",
+      "name": "[variables('storageAccountName')]",
+      "location": "[resourceGroup().location]",
+      "sku": {
+        "name": "[variables('StorageType')]"
+      },
+      "kind": "Storage",
+      "properties": {}
+    },
     {
       "apiVersion": "2016-03-30",
       "type": "Microsoft.Network/publicIPAddresses",
