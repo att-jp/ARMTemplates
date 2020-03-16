@@ -42,7 +42,7 @@
 
 ## セットアップ手順
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmcs-apps%2FARMTemplates%2Fmaster%2FJumpVM%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fatt-jp%2FARMTemplates%2Fmaster%2FJumpVM%2Fazuredeploy.json)
 
 上の "Deploy to Azure" ボタンからAzure Subscriptionに JumpVM を展開することができます。
 
@@ -52,6 +52,6 @@ Azure VMに対してインターネット経由で 3389 ポートを使用した
 
 Azure Bastion を展開したいときは、以下の "Deploy to Azure" ボタンから展開できます。
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmcs-apps%2FARMTemplates%2Fmaster%2FJumpVM%2Fbastion-template.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fatt-jp%2FARMTemplates%2Fmaster%2FJumpVM%2Fbastion-template.json)
 
 **Note: 事前にJump VM の展開が完了していることを確認した上で実行してください。**
