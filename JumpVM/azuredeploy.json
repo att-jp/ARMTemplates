@@ -27,7 +27,6 @@
     "addressPrefix": "10.1.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.1.0.0/24",
-    "vhdStorageType": "Premium_LRS",
     "publicIPAddressName": "jumpvmip",
     "publicIPAddressType": "static",
     "vmName": "jumpvm",
