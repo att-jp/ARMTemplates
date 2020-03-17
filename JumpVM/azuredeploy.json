@@ -31,7 +31,7 @@
     "publicIPAddressName": "jumpvmip",
     "publicIPAddressType": "static",
     "vmName": "jumpvm",
-    "vmSize": "Standard_F2s_V2",
+    "vmSize": "Standard_F4s_V2",
     "virtualNetworkName": "jumpvmVNet",
     "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
